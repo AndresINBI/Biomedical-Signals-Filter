@@ -1,4 +1,4 @@
-function Proyecto_MM3
+function Proyecto_SeguraMartinezAlejandro
 
 %Limpia la pantalla.
 clc;
@@ -54,7 +54,7 @@ switch OpS
 		pause (1);
 		fprintf('.\n');
 		%Llama a la función principal, reiniciando el programa
-		Proyecto_MM3;
+		Proyecto_SeguraMartinezAlejandro;
 
 
 	case 2
@@ -89,7 +89,7 @@ switch OpS
 		pause (1);
 		fprintf('.\n');
 		%Llama a la función principal, reiniciando el programa
-		Proyecto_MM3;
+		Proyecto_SeguraMartinezAlejandro;
        
     case 3
         fprintf('Saliendo del programa');
@@ -118,7 +118,7 @@ switch OpS
 		pause (1);
 		fprintf('.\n');
 		%Llama a la función principal, reiniciando el programa
-		Proyecto_MM3;
+		Proyecto_SeguraMartinezAlejandro;
 end
 
 
@@ -216,7 +216,7 @@ function graphic(x1,x2,y1,y2,y3,y4,titulo)
 			axis('tight');
 			xlabel('Segundos');
 			ylabel('Amplitud');
-		plot(x1,y1,'Linewidth',1.5);
+		plot(x1,y1,'Linewidth',1.5,'color','r');
 
 		ylim([-1 2]);
 
@@ -228,14 +228,14 @@ function graphic(x1,x2,y1,y2,y3,y4,titulo)
 			axis('tight');
 			xlabel('Segundos');
 			ylabel('Amplitud');
-		plot(x2,y3,'Linewidth',1.5);
+		plot(x2,y3,'Linewidth',1.5,'color','r');
 
 		%Selecciona la posicion en la que se presentara la gráfica.
 	position_1 = get(gcf,'Position');
 	set(gcf,'Position', position_1 - [position_1(3)/2,0,0,0])
 
 
-	|%Gráfica de la señal Filtrada
+	%Gráfica de la señal Filtrada
 		%Gráfica 2
 		G2 = figure(2);
 		%Lee el titulo establecido en G2
@@ -249,7 +249,7 @@ function graphic(x1,x2,y1,y2,y3,y4,titulo)
 			axis('tight');
 			xlabel('Segundos');
 			ylabel('Amplitud');
-		plot(x1,y2,'Linewidth',1.5);
+		plot(x1,y2,'Linewidth',1.5,'color','g');
 
 		ylim([-1 2]);
 
@@ -261,7 +261,7 @@ function graphic(x1,x2,y1,y2,y3,y4,titulo)
 			axis('tight');
 			xlabel('Segundos');
 			ylabel('Amplitud');
-		plot(x2,y4,'Linewidth',1.5);	
+		plot(x2,y4,'Linewidth',1.5,'color','g');	
 
 		%Selecciona la posicion en la que se presentara la gráfica.
 	position_2 = get(gcf,'Position');
