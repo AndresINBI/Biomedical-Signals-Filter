@@ -219,7 +219,7 @@ function graphic(x1,x2,y1,y2,y3,y4,titulo)
 		plot(x1,y1,'Linewidth',1.5,'color','r');
 
 		ylim([-1 2]);
-
+		
 		subplot(2,1,2);
 		%Muestra la transformada de Fourier
 			title('Transformada de Fourier');
@@ -266,5 +266,72 @@ function graphic(x1,x2,y1,y2,y3,y4,titulo)
 		%Selecciona la posicion en la que se presentara la gráfica.
 	position_2 = get(gcf,'Position');
 	set(gcf,'Position', position_2 + [position_1(3)/2,0,0,0])
+
+	%Gráfica de la señal sin filtrar
+		%Gráfica 3
+		G1 = figure(3);
+		%Lee el titulo establecido en G1
+		G1.Name = titulo;
+		G1.NumberTitle = 'off';
+		%Establece los parametros de las gráficas
+		subplot(2,1,1);
+			title('Comparación de señal');
+			hold('on');
+			grid('on');
+			axis('tight');
+			xlabel('Segundos');
+			ylabel('Amplitud');
+		plot(x1,y1,'Linewidth',1.5,'color','r');
+
+		ylim([-1 2]);
+		
+		subplot(2,1,2);
+		%Muestra la transformada de Fourier
+			title('Transformada de Fourier');
+			hold('on');
+			grid('on');
+			axis('tight');
+			xlabel('Segundos');
+			ylabel('Amplitud');
+		plot(x2,y3,'Linewidth',1.5,'color','r');
+
+		%Selecciona la posicion en la que se presentara la gráfica.
+	position_1 = get(gcf,'Position');
+	set(gcf,'Position', position_1 - [position_1(3)/2,0,0,0])
+
+
+	%Gráfica de la señal Filtrada
+		%Gráfica 3
+		G2 = figure(3);
+		%Lee el titulo establecido en G2
+		G2.Name = titulo;
+		G2.NumberTitle = 'off';
+		%Establece los parametros de las gráficas
+		subplot(2,1,1);
+			title('Comparación de señal');
+			hold('on');
+			grid('on');
+			axis('tight');
+			xlabel('Segundos');
+			ylabel('Amplitud');
+		plot(x1,y2,'Linewidth',1.5,'color','g');
+
+		ylim([-1 2]);
+
+		subplot(2,1,2);
+		%Muestra la transformada de Fourier
+			title('Comparación de la Transformada de Fourier');
+			hold('on');
+			grid('on');
+			axis('tight');
+			xlabel('Segundos');
+			ylabel('Amplitud');
+		plot(x2,y4,'Linewidth',1.5,'color','g');	
+
+		%Selecciona la posicion en la que se presentara la gráfica.
+	position_2 = get(gcf,'Position');
+	set(gcf,'Position', position_2 + [position_1(3)/2,0,0,0])
+
+
 
 end
