@@ -32,6 +32,7 @@ function BiomedicalSignalsFilter
 			otherwise
 				op=0;
 				clc;
+				disp('Hola');
 				
 		end
 	end
